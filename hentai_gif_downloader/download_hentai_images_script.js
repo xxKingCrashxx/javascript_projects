@@ -35,10 +35,6 @@ function get_request(api_link){
 async function download_image(link){
     let file_name = path.basename(link)
     let generated_path = path.dirname(link.replace(RESPONSE_API_BASE_LINK, ''));
-
-    console.log(generated_path);
-    console.log(file_name);
-
     let download_path = path.join(BASE_DOWNLOAD_DIRECTORY, generated_path);
 
     fs.mkdirSync(download_path, {
